@@ -54,7 +54,7 @@ make cluster-down # ugasi ga kad završiš
 Kopiraj u issue ili ga ažuriraj ovdje kako napreduješ.
 
 ### Checkpoint 1 (7. tjedan)
-- [ ] Aplikacija s najmanje 3 komponente (npr. API + baza + cache/worker)
+- [ ] Aplikacija s tri komponente: API + baza + Redis, `/health` provjerava obje veze
 - [ ] `Dockerfile` s multi-stage buildom, image manji od 300 MB
 - [ ] `compose.yaml` — cijeli stack se diže s `docker compose up`
 - [ ] CI pipeline: lint + testovi + build imagea na svaki PR
