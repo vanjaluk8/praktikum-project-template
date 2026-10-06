@@ -6,6 +6,44 @@ Ovo je tvoj osobni repozitorij za cijeli semestar. Sve vježbe i projekt nadogra
 
 ---
 
+## Sadržaj
+
+**Kreni ovdje**
+
+1. [Što se od tebe očekuje](docs/ocekivanja.md) — **pročitaj cijelo prije prvog termina.** Predaja, bodovanje, pravila za AI, kako postaviti pitanje, česta pitanja.
+2. [Hodogram](docs/hodogram.md) — cijeli semestar i tjedni postupak predaje u dijagramima, s objašnjenjem.
+3. [Brzi start](#brzi-start) — postavi repo i okruženje (1. tjedan).
+
+**O kolegiju**
+
+| Dokument | Kad ti treba |
+| --- | --- |
+| [Plan vježbi](docs/plan-vjezbi.md) | svaki tjedan — tema, zadatak i rok |
+| [Silabus](docs/silabus.md) | službeni opis kolegija: ishodi, bodovanje, uvjeti za prolaz, literatura |
+| [Popis projekata](docs/popis-projekata.md) | 1.–2. tjedan — odabir aplikacije |
+
+**Upute i alati**
+
+| Dokument | Kad ti treba |
+| --- | --- |
+| [GitHub Education](docs/github-education.md) | prije prvog termina |
+| [Git šalabahter](docs/git-cheatsheet.md) | stalno — sve git i GitHub naredbe |
+| [kind cluster](kind/README.md) | 1. tjedan i od 10. tjedna |
+| Lekcije po tjednima | [2. tjedan](docs/week-02-healthcheck.md) · ostale stižu tijekom semestra ([popis](docs/README.md#lekcije-po-tjednima)) |
+
+**Ti ispunjavaš**
+
+| Što | Kada |
+| --- | --- |
+| [Moj projekt](#moj-projekt) | 1. tjedan |
+| [Checklist projekta](#checklist-projekta) | kako napreduješ; ocjenjuje se na checkpointima |
+| [AI log](docs/ai-log.md) | cijeli semestar |
+| [Postmortem](docs/postmortem.md) | 14. tjedan |
+
+**U ovom README-u:** [Brzi start](#brzi-start) · [Struktura](#struktura) · [Pravila rada](#pravila-rada) · [Checklist projekta](#checklist-projekta) · [Moj projekt](#moj-projekt)
+
+---
+
 ## Brzi start
 
 Potrebno: Git, Docker Desktop, kubectl, kind, Helm, Argo CD CLI, Ansible, Trivy i Python 3.12. Na Windowsu sve radiš **unutar WSL2** (Ubuntu), a Docker Desktop mora imati uključenu WSL integraciju. Upute za instalaciju su u materijalima kolegija.
@@ -23,18 +61,20 @@ make cluster-down # ugasi ga kad završiš
 
 ## Struktura
 
+Svaka mapa ima svoj `README.md` sa svrhom i uputama.
+
 | Mapa | Što ide unutra | Tjedan |
 | --- | --- | --- |
-| `app/` | tvoja multi-service aplikacija (placeholder API možeš zamijeniti) | 1–3 |
+| [`app/`](app/README.md) | tvoja multi-service aplikacija (placeholder API možeš zamijeniti) | 1–3 |
 | `app/Dockerfile`, `compose.yaml` | kontejnerizacija | 4–5 |
 | `.github/workflows/` | CI/CD pipeline | 6–7 |
-| `infra/ansible/` | configuration management | 9 |
-| `k8s/` | Kubernetes manifesti | 10 |
-| `helm/` | Helm chart aplikacije | 8/11 |
-| `argocd/` | Argo CD `Application` za GitOps | 11 |
-| `monitoring/` | Prometheus pravila, Grafana dashboard | 12 |
-| `docs/` | AI log, postmortem, bilješke | cijeli semestar |
-| `kind/` | konfiguracija lokalnog clustera | 1 |
+| [`infra/ansible/`](infra/ansible/README.md) | configuration management | 9 |
+| [`k8s/`](k8s/README.md) | Kubernetes manifesti | 10 |
+| [`helm/`](helm/README.md) | Helm chart aplikacije | 8/11 |
+| [`argocd/`](argocd/README.md) | Argo CD `Application` za GitOps | 11 |
+| [`monitoring/`](monitoring/README.md) | Prometheus pravila, Grafana dashboard | 12 |
+| [`docs/`](docs/README.md) | informacije o kolegiju, lekcije, AI log, postmortem | cijeli semestar |
+| [`kind/`](kind/README.md) | konfiguracija lokalnog clustera | 1 |
 | `scripts/` | pomoćne skripte | — |
 
 ---
