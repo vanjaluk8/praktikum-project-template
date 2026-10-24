@@ -10,6 +10,8 @@ Ovdje živi tvoja aplikacija. Placeholder (`main.py`) je minimalni FastAPI servi
 
 Jezik i framework biraš sam. Ako mijenjaš jezik, prilagodi `Makefile` i CI workflow.
 
+**Pokretanje placeholdera:** `make install` (jednom), `source .venv/bin/activate` (u svakom novom terminalu), `make run`. Ovisnosti aplikacije su u `requirements.txt`; `requirements-dev.txt` dodaje pytest i ruff za `make test` i `make lint` i ne ide u Docker image.
+
 Svaki servis dobiva svoju podmapu kad ih bude više, npr.:
 
 ```

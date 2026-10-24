@@ -57,6 +57,15 @@ make cluster-up   # podigni lokalni kind cluster
 make cluster-down # ugasi ga kad završiš
 ```
 
+3. Python okruženje za placeholder API (2. tjedan):
+
+```bash
+make install                # jednom: .venv + ovisnosti
+source .venv/bin/activate   # u svakom novom terminalu
+make run                    # API na http://localhost:8000
+curl localhost:8000/health  # u drugom terminalu
+```
+
 ---
 
 ## Struktura
